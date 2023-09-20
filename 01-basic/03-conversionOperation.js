@@ -1,41 +1,50 @@
-let score = "33"
+// Primitive
 
-//console.log(typeof score)
-let valueInNumber = Number(score)
-//console.log(typeof valueInNumber)
+// 7 types: String, Number, Boolean, null, undefined, Symbol, BigInt
+const score = 100
+const isLoggedIn = false
+const outsideTemp = null
+let userEmail;
 
-// "33" => 33
-// "33abc" => NaN
-// true =>1; false=> 0
+const id = Symbol('123')
+const anotherId = Symbol('123')
+//console.log(id === anotherId);
 
-let isLoggedIn = ""
+const bigNumber = 12346657657867654564n
+// Refernce (Non-premitive)
 
-let booleanIsLoggedIn = Boolean(isLoggedIn)
-//console.log(booleanIsLoggedIn)
+// Array, Objects, Functions
 
-// 1 =>true; 0=>false
-// "" =>false
-// "nouman" => true
+const heros = ["quaideAzam", "allamaIqbal", "ahmadKhan"];
+let myObj = {
+    name: "nouman",
+    age: 22,
+}
+const myFunction = function () {
+    console.log("Hello world");
+}
 
-let someNumber = 33
-let stringNumber = String(someNumber)
-// console.log(stringNumber);
-// console.log(typeof stringNumber);
+//+++++++++++++++++++++++++++++++++     Memory     ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-// ********************** Operations ****************
+// Stack (Primitive), Heap (Non-Primitive)
 
-let value = 3
-let negValue = -value
-// console.log(negValue);
+let myYoutubeName = "noumanshafqat"
+let anotherName = myYoutubeName
+anotherName = "chaiaurcode"
 
-let str1 = "hello"
-let str2 = "nouman"
-let str3 = str1 + str2
-// console.log(str3);
+// console.log(myYoutubeName);
+// console.log(anotherName);
 
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 +2);
-// console.log(1 + 2 + "2");
-// console.log((3 + 4) *5 % 3);
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+userTwo.email = "nouman@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
 
